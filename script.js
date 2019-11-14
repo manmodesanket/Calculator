@@ -53,11 +53,13 @@ for(let i = 0; i < operator.length; i++)
 }
 
 let number = document.getElementsByClassName("number");
-for(let i = 0; i < operator.length; i++)
+for(let i = 0; i < number.length; i++)
 {
     number[i].addEventListener('click',function(){
-        output = getOutput();
-        output = output + this.id;
-        printOutput(output);
+        let output = getOutput();
+        if(output != NaN){
+            output = output + this.id;
+            printOutput(output);
+        }    
     })
 }
